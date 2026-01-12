@@ -1,6 +1,9 @@
 import tracerPlugin from '@eggjs/tracer';
+import { EggPlugin } from 'egg';
 
-export default {
-  // enable tracer plugin
+const plugin: EggPlugin = {
   ...tracerPlugin(),
-};
+  mcpProxy:true,
+}
+
+export default plugin;
