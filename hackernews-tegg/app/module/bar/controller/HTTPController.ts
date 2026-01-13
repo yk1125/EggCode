@@ -20,7 +20,7 @@ export interface BodyData {
 export default class PageController {
     
     @HTTPMethod({
-        method: HTTPMethodEnum.GET,
+        method: HTTPMethodEnum.POST,
         path: '/api/hello/(.*)',
     })
     async getHeaders(
