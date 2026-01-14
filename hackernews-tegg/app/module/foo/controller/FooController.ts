@@ -7,6 +7,7 @@ export default class FooController {
   @Inject()
   fooService: FooService;
 
+
   @HTTPMethod({
     method: HTTPMethodEnum.GET,
     path: '/test-aop',
@@ -21,5 +22,6 @@ export default class FooController {
       result: result
     };
   }
+
 
 }
