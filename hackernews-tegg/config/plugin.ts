@@ -3,6 +3,7 @@ import { EggPlugin } from 'egg';
 
 const plugin: EggPlugin = {
   ...tracerPlugin(),
+  teggAop: true,
 }
 
 export default plugin;

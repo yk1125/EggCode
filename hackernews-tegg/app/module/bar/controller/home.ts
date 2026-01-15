@@ -1,10 +1,12 @@
-import { Inject, HTTPController, HTTPMethod, HTTPMethodEnum, type Logger } from 'egg';
+import { Inject, HTTPController, HTTPMethod, HTTPMethodEnum, type Logger ,Middleware} from 'egg';
 import { HiService,WorldService } from '../../foo/service/HelloService.ts';    
 import { HelloService } from '../../foo/service/service.ts';  
+import { SimpleAopAdvice } from './aopMiddle/AopMiddle.ts';
 
 @HTTPController({
   path: '/',
 })
+@Middleware(SimpleAopAdvice)
 export class HomeController {
   @Inject()
   private logger: Logger;
