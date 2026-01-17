@@ -8,8 +8,8 @@ import{
     HTTPBody,
     Cookies,
     HTTPCookies,
-    IncomingHttpHeaders,//请求头类型
 } from 'egg';
+import type { IncomingHttpHeaders } from 'node:http'; //请求头类型
 
 //定义body的接口（参数类型）
 export interface BodyData {

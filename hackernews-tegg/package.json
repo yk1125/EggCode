@@ -41,6 +41,7 @@
     "@eggjs/mock": "beta",
     "@eggjs/tsconfig": "beta",
     "@oxc-node/core": "^0.0.35",
+    "@types/mocha": "^10.0.10",
     "@types/node": "24",
     "@vitest/coverage-v8": "4",
     "cross-env": "10",
