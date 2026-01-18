@@ -1,0 +1,36 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "type": "commonjs",
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^3.17.5",
+    "egg-scripts": "2"
+  },
+  "devDependencies": {
+    "egg-bin": "6",
+    "egg-mock": "5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-hello",
+    "stop": "egg-scripts stop --title=egg-server-hello",
+    "dev": "egg-bin dev",
+    "test": "npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
