@@ -10,11 +10,17 @@ logs/
 *.swp
 *.lock
 *.js
+# 但保留 egg-hello 子项目的 .js 文件（纯 JS 项目）
+!egg-hello/**/*.js
 .eslintcache
 
 app/**/*.js
 test/**/*.js
 config/**/*.js
+# 但保留 egg-hello 子项目的 .js 文件
+!egg-hello/app/**/*.js
+!egg-hello/test/**/*.js
+!egg-hello/config/**/*.js
 app/**/*.map
 test/**/*.map
 config/**/*.map
