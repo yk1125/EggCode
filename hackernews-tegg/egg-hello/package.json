@@ -23,6 +23,8 @@
     "start": "egg-scripts start --daemon --title=egg-server-hello",
     "stop": "egg-scripts stop --title=egg-server-hello",
     "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "debug-test": "egg-bin debug test",
     "test": "npm run test:local",
     "test:local": "egg-bin test",
     "cov": "egg-bin cov",
