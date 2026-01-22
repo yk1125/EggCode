@@ -4,6 +4,9 @@
 const RegistryClient = require('./lib/registry_client');
 
 module.exports = (app) => {
+
+  app.logger.info('应用启动完成，当前环境：%s', app.config.env);
+
   /**
    * 核心代码：和 agent.js 中一模一样！
    *
