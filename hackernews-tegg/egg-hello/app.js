@@ -7,6 +7,13 @@ module.exports = (app) => {
 
   app.logger.info('应用启动完成，当前环境：%s', app.config.env);
 
+  // 设置 app.locals 全局变量
+  // 这些变量在所有模板中都可以使用
+  app.locals = {
+    appName: 'Egg.js 学习项目',
+    version: '1.0.0',
+  };
+
   /**
    * 核心代码：和 agent.js 中一模一样！
    *
@@ -48,5 +55,18 @@ module.exports = (app) => {
     );
 
     app.coreLogger.info(`📡 [Worker ${process.pid}] 已订阅 demo.UserService`);
+  });
+
+  /**
+   * IPC 学习示例：Worker 接收 Agent 发来的消息
+   *
+   * 所有 Worker 都会收到这个消息！
+   */
+  // 用于存储当前配置（所有 Worker 共享同一份代码，但各自有独立的内存）
+  app.currentConfig = null;
+
+  app.messenger.on('config-update', (config) => {
+    app.currentConfig = config;
+    app.logger.info(`📥 [Worker ${process.pid}] 收到配置更新: %j`, config);
   });
 };

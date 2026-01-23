@@ -41,4 +41,14 @@ module.exports = {
     if (bytes < 1024 * 1024 * 1024) return (bytes / 1024 / 1024).toFixed(2) + ' MB';
     return (bytes / 1024 / 1024 / 1024).toFixed(2) + ' GB';
   },
+
+  /**
+   * 将字符串首字母转为小写
+   * @param {string} str - 字符串
+   * @return {string} 首字母小写的字符串
+   */
+  lowercaseFirst(str) {
+    if (!str) return '';
+    return str[0].toLowerCase() + str.substring(1);
+  },
 };

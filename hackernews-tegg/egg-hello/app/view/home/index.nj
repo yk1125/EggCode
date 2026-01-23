@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 { color: #333; }
+    h2 { color: #666; margin-top: 30px; }
+    .info { color: #888; font-size: 14px; }
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>{{ title }}</h1>
+    <p class="info">当前语言: {{ currentLocale }} | 访问 ?locale=en-US 或 ?locale=zh-CN 切换语言</p>
+  </div>
+
+  <div class="card">
+    <h2>1. 基础数据渲染</h2>
+    <p>用户名: <strong>{{ name }}</strong></p>
+    <p>邮箱: {{ email }}</p>
+  </div>
+
+  <div class="card">
+    <h2>2. i18n 国际化</h2>
+    <p>{{ __('Email') }}: {{ email }}</p>
+    <p>{{ __('Welcome back, %s!', name) }}</p>
+    <p>{{ __('Hello {0}! My name is {1}.', ['Alice', 'Bob']) }}</p>
+  </div>
+
+  <div class="card">
+    <h2>3. Helper 辅助函数</h2>
+    <p>原始文本: {{ name }}</p>
+    <p>转小写: {{ helper.lowercaseFirst(name) }}</p>
+  </div>
+
+  <div class="card">
+    <h2>4. ctx 上下文信息</h2>
+    <p>请求路径: <code>{{ ctx.path }}</code></p>
+    <p>请求方法: <code>{{ ctx.method }}</code></p>
+    <p>应用名称: {{ ctx.app.config.name }}</p>
+  </div>
+
+  <div class="card">
+    <h2>5. app.locals 全局变量</h2>
+    <p>应用名称: {{ appName }}</p>
+    <p>版本号: {{ version }}</p>
+  </div>
+</body>
+</html>

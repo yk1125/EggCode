@@ -21,6 +21,23 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  // i18n 配置
+  config.i18n = {
+    defaultLocale: 'zh-CN',
+    queryField: 'locale',
+    cookieField: 'locale',
+    cookieMaxAge: '1y',
+  };
+
+  // view 配置
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    defaultExtension: '.nj',
+    mapping: {
+      '.nj': 'nunjucks',
+    },
+  };
+
   // 为了方便测试，暂时关闭 CSRF 保护
   config.security = {
     csrf: {

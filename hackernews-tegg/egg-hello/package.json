@@ -8,8 +8,11 @@
     "declarations": true
   },
   "dependencies": {
+    "@eggjs/i18n": "^3.0.1",
     "egg": "^3.17.5",
     "egg-scripts": "2",
+    "egg-view": "^2.1.4",
+    "egg-view-nunjucks": "^2.3.0",
     "sdk-base": "^5.0.1"
   },
   "devDependencies": {

@@ -4,4 +4,14 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
+
+  i18n: {
+    enable: true,
+    package: '@eggjs/i18n',
+  },
+
+  nunjucks: {
+    enable: true,
+    package: 'egg-view-nunjucks',
+  },
 };
