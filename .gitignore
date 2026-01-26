@@ -1,0 +1,32 @@
+# 依赖目录
+node_modules/
+
+# 日志文件
+logs/
+*.log
+
+# 数据库文件
+*.sqlite
+*.sqlite-journal
+
+# 运行时文件
+run/
+*.pid
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env
+.env.local
+
+# 构建产物
+dist/
+build/

@@ -1,0 +1,15 @@
+
+# 依赖目录
+node_modules/
+
+# 日志文件
+logs/
+*.log
+
+# 数据库文件
+*.sqlite
+*.sqlite-journal
+
+# 运行时文件
+run/
+*.pid
